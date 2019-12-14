@@ -6,7 +6,7 @@ package com.swiley.practice.daily;
  */
 public class MissingInteger
 {
-    private int[] input;
+    private final int[] input;
 
     private MissingInteger(int[] input) {
         this.input = input;
@@ -29,7 +29,7 @@ public class MissingInteger
             if (self.input[i] >= 0) {
                 return i + 1;
             } else {
-                max = Math.max(max, 0 - self.input[i]);
+                max = Math.max(max, -self.input[i]);
             }
         }
 
@@ -49,9 +49,9 @@ public class MissingInteger
             var absValue = Math.abs(value);
             var index =  absValue - 1;
             if (input[index] == 0) {
-                input[index] = 0 - absValue;
+                input[index] = -absValue;
             } else {
-                input[index] = 0 - Math.abs(input[index]);
+                input[index] = -Math.abs(input[index]);
             }
         }
     }

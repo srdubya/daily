@@ -2,6 +2,7 @@ package com.swiley.practice.daily;
 
 public class Sudoku {
     
+    @SuppressWarnings("EmptyMethod")
     public static void main(String[] args) {
     }
 
